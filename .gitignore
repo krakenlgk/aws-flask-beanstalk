@@ -30,7 +30,7 @@ wheels/
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
-.ebextensions/
+
 
 # Local environment
 .env.local
@@ -50,3 +50,7 @@ yarn-error.log*
 .vscode
 *.swp
 *.swo
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
