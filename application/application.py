@@ -1,11 +1,13 @@
 from flask import Flask, render_template
+from datetime import datetime
 
 # Elastic Beanstalk looks for an 'application' callable by default
 application = Flask(__name__)
 
 @application.route('/')
 def home():
-    return '<h1>Hello, World!</h1><p>This is a Flask app deployed on AWS Elastic Beanstalk.</p>'
+    deployment_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    return render_template('index.html', deployment_time=deployment_time)
 
 @application.route('/health')
 def health():
